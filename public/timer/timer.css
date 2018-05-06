@@ -8,7 +8,7 @@
 }
 
 .setArea input[type=checkbox] {
-    transform: scale(4);
+    zoom: 4;
     margin-left: 0px;
     padding: 0px;
 }
