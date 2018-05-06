@@ -1,15 +1,15 @@
 var timerSetup = (function() {
-    var protocalName;
+    var protocolName;
     let urlParams = utility.parseURLParams(location.search);
     let readyTime = 10;
     initTimerSetup(urlParams.timer);
 
-    function initTimerSetup(protocal) {
-        protocalName = protocal;
-        drawSetup(protocal);
+    function initTimerSetup(protocol) {
+        protocolName = protocol;
+        drawSetup(protocol);
     }
 
-    function drawSetup(protocalName) {
+    function drawSetup(protocolName) {
         const bodyContainer = document.getElementById('bodyContainer');
         const timerSetupTemplate = document.getElementById('timerSetup');
         utility.replaceElements(bodyContainer, timerSetupTemplate.content.cloneNode(true));
@@ -25,13 +25,13 @@ var timerSetup = (function() {
         }
     }
 
-    function setProtocalName(protocal) {
-        protocalName = protocal;
+    function setProtocolName(protocol) {
+        protocolName = protocol;
         return;
     }
 
     function constructTimer(setInfo) {
-        var repTime = getRepTime(protocalName);
+        var repTime = getRepTime(protocolName);
         var intervals = {
             oneArm: [],
             standard: []
@@ -89,9 +89,9 @@ var timerSetup = (function() {
         return intervalSet;
     }
 
-    function getRepTime(protocalName) {
+    function getRepTime(protocolName) {
         var repTimes;
-        switch(protocalName) {
+        switch(protocolName) {
             case "sevenFiftyThree":
                 repTimes = {
                     work: 7,
