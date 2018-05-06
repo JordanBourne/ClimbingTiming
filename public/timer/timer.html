@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>Climbing Timing</title>
+	</head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../index.css">
+    <link rel="stylesheet" type="text/css" href="../homepage.css">
+    <link rel="stylesheet" type="text/css" href="./timer.css">
+	<body>
+        <div id="bodyContainer">
+        </div>
+        <template id="timerMain">
+            <h1 class="bodyTitle">Climbing Timing</h1>
+            <div class="clockContainer">
+                <div class="clockFace" id="clock">
+                    00:<span id="clockSeconds">00</span>.00
+                </div>
+            </div>
+            <div class="timerInstructions" id="instruction">
+                Get Ready
+            </div>
+
+            <div class="timerControls">
+                <div class="timerButton leftButton" onclick="timer.pressedLeftButton()">
+                    <span class="leftButtonText" id="leftButton">Edit</span>
+                </div>
+                <div class="timerButton rightButton" onclick="timer.pressedRightButton()">
+                    <span class="rightButtonText" id="rightButton">Start</span>
+                </div>
+            </div>
+        </template>
+
+        <template id="timerSetup">
+            <h1 class="bodyTitle">Climbing Timing</h1>
+            <div class="protocalHeader">
+                <div class="protocalHeaderText">
+                    S E T T I N G S
+                </div>
+            </div>
+            <div class="setArea">
+                <span class="setQuestion">Number of Reps</span>
+                <input class="setInput" type="number" value="5" id="repNumber" />
+            </div>
+            <div class="setArea">
+                <span class="setQuestion">Number of Sets</span>
+                <input class="setInput" type="number" value="5" id="setNumber" />
+            </div>
+            <div class="setArea">
+                <span class="setQuestion">One Arm Hangs</span>
+                <input class="setInput" type="checkbox" id="oneArmHang" />
+            </div>
+            <div class="setArea" id="startTimer" onclick="timerSetup.buildIntervals()">
+                <span class="startTimer">Start Timer</span>
+            </div>
+        </template>
+
+        <script src="../utility.js"></script>
+        <script src="../chooseProtocal.js"></script>
+        <script src="./timerSetup.js"></script>
+        <script src="./timerMain.js"></script>
+	</body>
+</html>

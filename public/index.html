@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Climbing Timing</title>
+	</head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="homepage.css">
+	<body>
+        <div id="bodyContainer">
+            <h1 class="bodyTitle">Climbing Timing</h1>
+            <div class="protocalHeader">
+                <div class="protocalHeaderText">
+                    T R A I N I N G
+                </div>
+            </div>
+            <div class="protocalArea" onclick="chooseProtocal.loadTimer('sevenFiftyThree')" id="sevenFiftyThree">
+                <span class="protocalText protocalOne">
+                    7-53
+                </span>
+            </div>
+            <div class="protocalArea" onclick="chooseProtocal.loadTimer('sevenThreeRepeaters')" id="sevenThreeRepeaters">
+                <span class="protocalText protocalTwo">
+                    7-3 Repeaters
+                </span>
+            </div>
+            <div class="protocalArea" onclick="chooseProtocal.loadTimer('maxHang')" id="maxHang">
+                <span class="protocalText protocalThree">
+                    Max Hangs
+                </span>
+            </div>
+            <div class="protocalArea" onclick="chooseProtocal.loadTimer('customTimer')" id="customTimer">
+                <span class="protocalText protocalFour">
+                    Custom Timer
+                </span>
+            </div>
+        </div>
+
+        <script src="utility.js"></script>
+        <script src="chooseProtocal.js"></script>
+	</body>
+</html>

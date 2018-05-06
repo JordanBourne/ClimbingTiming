@@ -1,0 +1,60 @@
+.bodyTitle {
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.protocalHeader {
+    height: 20%;
+    background-image: url("./hangboard.png");
+    background-size: cover;
+    width: 100%;
+}
+
+.protocalHeaderText {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(255,255,255,.5);
+    font-size: 4em;
+    height: 100%;
+    width: 100%;
+}
+
+.protocalArea {
+    height: 17.5%;
+    font-size: 3.5em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+}
+
+.protocalText {
+    width: fit-content;
+    margin: auto;
+ }
+
+.protocalOne {
+    border-bottom: 2px solid green;
+}
+
+.protocalTwo {
+    border-bottom: 2px solid cyan;
+}
+
+.protocalThree {
+    border-bottom: 2px solid orange;
+}
+
+.protocalFour {
+    border-bottom: 2px solid purple;
+}

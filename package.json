@@ -1,0 +1,23 @@
+{
+  "name": "climbingtiming",
+  "version": "1.0.0",
+  "description": "Hangboard Timing App",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_PATH=./ mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JordanBourne/ClimbingTiming.git"
+  },
+  "author": "Jordan Bourne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JordanBourne/ClimbingTiming/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.3"
+  },
+  "homepage": "https://github.com/JordanBourne/ClimbingTiming#readme"
+}
