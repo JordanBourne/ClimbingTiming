@@ -17,6 +17,6 @@ app.use((err, req, res, next) => {
 	res.json({code: 'UNCAUGHT_EXCEPTION', message: err});
 });
 
-app.listen(80, function() {
+app.listen(3000, function() {
 	console.log('hello world');
 });
