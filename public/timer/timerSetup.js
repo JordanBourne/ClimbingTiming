@@ -10,14 +10,37 @@ var timerSetup = (function() {
     }
 
     function drawSetup(protocolName) {
-        const bodyContainer = document.getElementById('bodyContainer');
-        const timerSetupTemplate = document.getElementById('timerSetup');
+        const bodyContainer = document.getElementById("bodyContainer");
+        const timerSetupTemplate = document.getElementById("timerSetup");
         utility.replaceElements(bodyContainer, timerSetupTemplate.content.cloneNode(true));
+
+        addTimerSettings(bodyContainer, protocolName);
+    }
+
+    function addTimerSettings(container, protocolName) {
+        protocolConfig[protocolName].settings.forEach((setting) => {
+            let settingTemplate = document.getElementById(`timerSetting${utility.nameCase(setting.settingType)}`);
+			settingTemplate.content.querySelector('.setQuestion').innerHTML = utility.nameCase(setting.settingName);
+			settingTemplate.content.querySelector('.setInput').id = setting.settingName;
+            container.appendChild(settingTemplate.content.cloneNode(true));
+        });
+
+        let startButtonTemplate = document.getElementById("timerStart");
+        container.appendChild(startButtonTemplate.content.cloneNode(true));
+
+        console.log(document.styleSheets);
     }
 
     function getSetInfo() {
-        var repNumber = document.getElementById("repNumber").value;
-        var setNumber = document.getElementById("setNumber").value;
+        var repNumber = 1;
+        var setNumber = 1;
+
+        if (document.getElementById("numberOfReps")) {
+            repNumber = document.getElementById("numberOfReps").value;
+        }
+        if (document.getElementById("numberOfSets")) {
+            setNumber = document.getElementById("numberOfSets").value;
+        }
 
         return {
             reps: repNumber,
@@ -32,6 +55,7 @@ var timerSetup = (function() {
 
     function constructTimer(setInfo) {
         var repTime = getRepTime(protocolName);
+        console.log('Rep Time: ', repTime);
         var intervals = {
             oneArm: [],
             standard: []
@@ -90,36 +114,34 @@ var timerSetup = (function() {
     }
 
     function getRepTime(protocolName) {
-        var repTimes;
-        switch(protocolName) {
-            case "sevenFiftyThree":
-                repTimes = {
-                    work: 7,
-                    rest: 53
-                };
-                break;
-            case "sevenThreeRepeaters":
-                repTimes = {
-                    work: 7,
-                    rest: 3
-                };
-                break;
-            case "maxHang":
-                repTimes = {
-                    work: 10,
-                    rest: 0
-                };
-                break;
+        console.log("Protocol Name: ", protocolName);
+        if (protocolName === "customTimer") {
+            console.log("Getting Times");
+            return getCustomTimes();
         }
+        return protocolConfig[protocolName].repTimes;
+    }
 
-        return repTimes;
+    function getCustomTimes() {
+        var hangTime = document.getElementById("hangTime").value;
+        var timeBetweenReps = document.getElementById("timeBetweenReps").value;
+
+        console.log('Times: ', {
+            work: hangTime,
+            rest: timeBetweenReps
+        });
+
+        return {
+            work: hangTime,
+            rest: timeBetweenReps
+        }
     }
 
     return {
         buildIntervals: function() {
             var setInfo = getSetInfo();
             var timerIntervals = constructTimer(setInfo);
-            var useOneArmHang = document.getElementById("oneArmHang").checked;
+            var useOneArmHang = document.getElementById("oneArmHangs").checked;
             if (useOneArmHang) {
                 return timer.initTimer(timerIntervals.oneArm);
             } else {

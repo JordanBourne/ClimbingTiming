@@ -55,7 +55,7 @@ let timer = (function() {
     }
 
     function editTimer() {
-        return true;
+        location.reload();
     }
 
     function stopTimer() {
@@ -127,6 +127,10 @@ let timer = (function() {
         let button = document.getElementById(buttonSetting.button);
         button.innerHTML = buttonSetting.text;
         buttonConfig[`${buttonSetting.button}Function`] = buttonSetting.buttonFunction;
+    }
+
+    function finishTimer() {
+        console.log("Timer finished");
     }
 
     return {
