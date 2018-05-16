@@ -21,14 +21,12 @@ var timerSetup = (function() {
         protocolConfig[protocolName].settings.forEach((setting) => {
             let settingTemplate = document.getElementById(`timerSetting${utility.nameCase(setting.settingType)}`);
 			settingTemplate.content.querySelector('.setQuestion').innerHTML = utility.nameCase(setting.settingName);
-			settingTemplate.content.querySelector('.setInput').id = setting.settingName;
+			settingTemplate.content.querySelector('.settingInput').id = setting.settingName;
             container.appendChild(settingTemplate.content.cloneNode(true));
         });
 
         let startButtonTemplate = document.getElementById("timerStart");
         container.appendChild(startButtonTemplate.content.cloneNode(true));
-
-        console.log(document.styleSheets);
     }
 
     function getSetInfo() {

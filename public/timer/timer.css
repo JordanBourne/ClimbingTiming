@@ -7,12 +7,6 @@
     border-bottom: 1px solid rgba(0,0,0,.5);
 }
 
-.setArea input[type=checkbox] {
-    zoom: 4;
-    margin-left: 0px;
-    padding: 0px;
-}
-
 .setQuestion {
     margin-left: 17.5%;
 }
@@ -24,6 +18,12 @@
     display: inline-block;
     margin-right: 17.5%;
     text-align: center;
+}
+
+.setInput input[type=checkbox] {
+    zoom: 4;
+    margin-left: 0px;
+    padding: 0px;
 }
 
 .startTimer {
