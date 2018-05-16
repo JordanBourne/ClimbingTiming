@@ -37,20 +37,25 @@
                     S E T T I N G S
                 </div>
             </div>
+        </template>
+
+        <template id="timerSettingNumber">
             <div class="setArea">
                 <span class="setQuestion">Number of Reps</span>
-                <input class="setInput" type="number" value="5" id="repNumber" />
+                <input class="setInput settingInput" type="number" value="5" id="repNumber" />
             </div>
+        </template>
+
+        <template id="timerSettingCheckbox">
             <div class="setArea">
-                <span class="setQuestion">Number of Sets</span>
-                <input class="setInput" type="number" value="5" id="setNumber" />
-            </div>
-            <div class="setArea">
-                <span class="setQuestion">One Arm Hangs</span>
-				<div class="setInput">
-					<input type="checkbox" id="oneArmHang" />
+                <span class="setQuestion"></span>
+                <div class="setInput">
+					<input class=" settingInput" type="checkbox" id="oneArmHang" />
 				</div>
             </div>
+        </template>
+
+        <template id="timerStart">
             <div class="setArea" id="startTimer" onclick="timerSetup.buildIntervals()">
                 <span class="startTimer">Start Timer</span>
             </div>
@@ -58,6 +63,7 @@
 
         <script src="../utility.js"></script>
         <script src="../chooseProtocol.js"></script>
+        <script src="../protocolConfig.js"></script>
         <script src="./timerSetup.js"></script>
         <script src="./timerMain.js"></script>
 	</body>
