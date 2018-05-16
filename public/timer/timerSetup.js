@@ -20,8 +20,8 @@ var timerSetup = (function() {
     function addTimerSettings(container, protocolName) {
         protocolConfig[protocolName].settings.forEach((setting) => {
             let settingTemplate = document.getElementById(`timerSetting${utility.nameCase(setting.settingType)}`);
-			settingTemplate.content.querySelector('.setQuestion').innerHTML = utility.nameCase(setting.settingName);
-			settingTemplate.content.querySelector('.settingInput').id = setting.settingName;
+			settingTemplate.content.querySelector('span').innerHTML = utility.nameCase(setting.settingName);
+			settingTemplate.content.querySelector('input').id = setting.settingName;
             container.appendChild(settingTemplate.content.cloneNode(true));
         });
 
