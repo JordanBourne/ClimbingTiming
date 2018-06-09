@@ -32,9 +32,24 @@
     border-bottom: 2px solid green;
 }
 
+.timerNext {
+    height: 15%;
+    width: 100%;
+    font-size: 3.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nextText {
+    border-bottom: 1px solid black;
+}
+
 .clockContainer {
-    margin-top: 20%;
-    height: 30%;
+    margin-top: 0%;
+    height: 35%;
     font-size: 10em;
     display: flex;
     align-items: center;
@@ -48,7 +63,7 @@
 
 .timerInstructions {
     width: 100%;
-    font-size: 5em;
+    font-size: 6.5em;
     text-align: center;
 }
 
