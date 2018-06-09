@@ -81,6 +81,8 @@ let timer = (function() {
 
         let currentInterval = intervals.shift();
         document.getElementById("instruction").innerHTML = currentInterval.text;
+        let nextInterval = intervals[0];
+        document.getElementById("nextInstruction").innerHTML = nextInterval.text;
         let currentTime = new Date().getTime();
         let endTime = currentTime + currentInterval.time * 1000;
         timer = setInterval(function() {
