@@ -9,14 +9,47 @@
 
           gtag('config', 'UA-75196325-4');
         </script>
+        <meta name="viewport" content="width=device-width">
 		<title>Climbing Timing</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="homepage.css">
 	</head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="homepage.css">
 	<body>
-        <div id="bodyContainer">
-            <h1 class="bodyTitle">Climbing Timing</h1>
+        <div id="desktopBodyContainer">
+            <div class="bodySplash">
+                <h1 class="splashTitle">
+                    <span class="textBottom">Climbing Timing</span>
+                </h1>
+                <div id="protocolDropdown">
+                    <div class="protocolSelect">
+                        Choose Timer
+                    </div>
+                    <div class="protocolArea" onclick="chooseProtocol.loadTimer('sevenFiftyThree')" id="sevenFiftyThree">
+                        <span class="protocolText protocolOne">
+                            7-53
+                        </span>
+                    </div>
+                    <div class="protocolArea" onclick="chooseProtocol.loadTimer('sevenThreeRepeaters')" id="sevenThreeRepeaters">
+                        <span class="protocolText protocolTwo">
+                            7-3 Repeaters
+                        </span>
+                    </div>
+                    <div class="protocolArea" onclick="chooseProtocol.loadTimer('maxHang')" id="maxHang">
+                        <span class="protocolText protocolThree">
+                            Max Hangs
+                        </span>
+                    </div>
+                    <div class="protocolArea" onclick="chooseProtocol.loadTimer('customTimer')" id="customTimer">
+                        <span class="protocolText protocolFour">
+                            Custom Timer
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobileBodyContainer">
+            <h1 class="mobileTitle">Climbing Timing</h1>
             <div class="protocolHeader">
                 <div class="protocolHeaderText">
                     T R A I N I N G

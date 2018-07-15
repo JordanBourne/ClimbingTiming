@@ -1,27 +1,37 @@
+.bodyTitle {
+    text-align: center;
+    font-size: 1.5em;
+}
+
 .setArea {
     height: 12.5%;
-    font-size: 2.5em;
+    font-size: 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid rgba(0,0,0,.5);
 }
 
+.setArea:last-child {
+    border-bottom: none;
+}
+
 .setQuestion {
     margin-left: 17.5%;
+    font-size: 1em;
 }
 
 .setInput {
-    border: 0px solid black;
+    border: 0px;
     font-size: 1em;
     width: 100px;
     display: inline-block;
-    margin-right: 17.5%;
+    margin-right: 12.5%;
     text-align: center;
 }
 
 .setInput input[type=checkbox] {
-    zoom: 4;
+    zoom: 2;
     margin-left: 0px;
     padding: 0px;
 }
@@ -35,7 +45,6 @@
 .timerNext {
     height: 15%;
     width: 100%;
-    font-size: 3.5em;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -50,7 +59,7 @@
 .clockContainer {
     margin-top: 0%;
     height: 35%;
-    font-size: 10em;
+    font-size: 4em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,7 +72,7 @@
 
 .timerInstructions {
     width: 100%;
-    font-size: 6.5em;
+    font-size: 2em;
     text-align: center;
 }
 
@@ -77,7 +86,7 @@
 .timerButton {
     width: 50%;
     margin: 20% 0px 0px 0px;
-    font-size: 4em;
+    font-size: 2em;
 }
 
 .leftButtonText {
@@ -86,4 +95,51 @@
 
 .rightButtonText {
     border-bottom: 2px solid green;
+}
+
+#nextInstruction {
+    font-size: 1.5em;
+}
+
+@media (min-width: 801px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #bodyContainer {
+        margin-top: -5%;
+        border: 2px solid black;
+        min-width: 700px;
+        width: 80%;
+        min-height: 50%;
+        text-align: center;
+    }
+
+    .setQuestion {
+        margin-left: 22.5%;
+    }
+
+    .setInput {
+        margin-right: 22.5%;
+    }
+
+    .bodyTitle {
+        margin: 5%;
+    }
+
+    .timerButton {
+        margin: 5%;
+    }
+
+    .clockContainer {
+        height: 20%;
+        font-size: 6em;
+    }
+}
+
+@media (max-width: 800px) {
+    .protocolHeader {
+        height: 15%
+    }
 }
