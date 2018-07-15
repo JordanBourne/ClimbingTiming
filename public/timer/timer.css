@@ -17,16 +17,16 @@
 }
 
 .setQuestion {
-    margin-left: 17.5%;
-    font-size: 1em;
+    margin-left: 15%;
+    font-size: .9em;
 }
 
 .setInput {
     border: 0px;
-    font-size: 1em;
+    font-size: .9em;
     width: 100px;
     display: inline-block;
-    margin-right: 12.5%;
+    margin-right: 7.5%;
     text-align: center;
 }
 
